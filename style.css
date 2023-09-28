@@ -1,0 +1,242 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: content-box;
+}
+
+html {
+  font-size: 12px;
+  height: 100%;
+}
+
+body {
+  font-size: 1rem;
+  padding: 5% 3% 0 3%;
+  font-family: "Montserrat", sans-serif;
+}
+
+/*main*/
+
+main {
+  margin-top: 10%;
+}
+
+img {
+  width: 35%;
+  border-radius: 12px;
+}
+
+.checkout_box {
+  background-color: #f2f2f2;
+  padding: 5%;
+}
+
+.orientation {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.bag,
+.shoes {
+  display: flex;
+}
+
+.shoes {
+  margin-top: 8%;
+}
+
+.itemsNumber {
+  border: 1px solid #333;
+  width: 50%;
+  height: 4vh;
+  border-radius: 12px;
+  margin: 0 0 0 9.5%;
+  background-color: inherit;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: large;
+  font-weight: bold;
+}
+
+.plus,
+.minus {
+  background-color: #e0e0e0;
+  color: #333;
+  width: 25%;
+  height: 60%;
+  font-size: large;
+  cursor: pointer;
+  border-radius: inherit;
+}
+.orange_txt {
+  padding-top: 4%;
+}
+
+.shipping_total {
+  margin-top: 20%;
+}
+
+.line {
+  border: 0.12px solid #bdbdbd;
+}
+
+/*Contact info and shipping*/
+.details {
+  margin-top: 15%;
+}
+.label_input {
+  display: flex;
+  margin-top: 3%;
+  padding-left: 3%;
+  align-items: center;
+  border: 1.5px solid #bdbdbd;
+  border-radius: 12px;
+  height: 4.5vh;
+}
+form {
+  margin-bottom: 3%;
+}
+label {
+  font-weight: bold;
+  text-transform: capitalize;
+  margin: 0;
+}
+
+input {
+  padding: 0 2%;
+  border: none;
+  color: #bdbdbd;
+  font-size: 0.8rem;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  height: 100%;
+}
+
+.country_postalcode {
+  display: flex;
+  justify-content: space-between;
+}
+
+.country,
+.postal {
+  width: 50%;
+}
+
+.last_form {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 64.7%;
+}
+
+button {
+  margin: 10% 0;
+  background-color: #f2994a;
+  color: #fff;
+  width: 38%;
+  height: 6vh;
+  text-transform: capitalize;
+  border: none;
+  border-radius: 12px;
+  font-size: medium;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+}
+
+footer {
+  position: relative;
+  text-align: center;
+}
+/*sm tablets*/
+@media screen and (min-width: 426px) and (orientation: portrait) {
+  .itemsNumber {
+    height: 6vh;
+  }
+}
+
+/*md tablets*/
+@media screen and (min-width: 768px) and (orientation: portrait) {
+  .itemsNumber {
+    border-radius: 18px;
+  }
+}
+
+/*lg tablets*/
+@media screen and (min-width: 1024px) and (orientation: portrait) {
+  body {
+    font-size: 1.8rem;
+  }
+
+  .continue {
+    font-size: larger;
+    letter-spacing: 3px;
+  }
+}
+
+/*sm computer*/
+@media screen and (min-width: 769px) and (orientation: landscape) {
+  body {
+    font-size: 1.5rem;
+  }
+
+  main {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .itemsNumber {
+    height: 4vh;
+    border-radius: 18px;
+  }
+
+  .checkout_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .details {
+    width: 50%;
+    height: 100%;
+  }
+
+  .continue {
+    width: 20%;
+    height: 8vh;
+    font-size: larger;
+    letter-spacing: 2px;
+  }
+}
+
+/*md computer*/
+@media screen and (min-width: 1024px) and (orientation: landscape) {
+  body {
+    font-size: 1.5rem;
+  }
+}
+
+/*lg computer*/
+@media screen and (min-width: 1440px) and (orientation: landscape) {
+  body {
+    font-size: 1.5rem;
+  }
+}
+
+/*lg computer*/
+@media screen and (min-width: 1920px) and (orientation: landscape) {
+  body {
+    font-size: 2rem;
+    padding: 3% 10% 0 10%;
+  }
+
+  .itemsNumber {
+    height: 5vh;
+    border-radius: 20px;
+  }
+}
