@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>06-Chechout page</title>
+    <title>06-Checkout page</title>
     <link rel="stylesheet" href="style.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
       rel="stylesheet"
     />
     <link
@@ -15,176 +15,179 @@
     />
   </head>
   <body>
-    <h1>Checkout</h1>
+    <header><h1>Checkout</h1></header>
     <main>
-      <!--Checkout-->
-      <div class="checkout_box" style="border-radius: 12px">
-        <div>
-          <section class="bag">
-            <img src="photo1.png" alt="" />
-            <div class="orientation">
-              <section style="margin-left: 10%">
-                <h5>Vintage Backbag</h5>
-                <h4 class="orange_txt" style="color: #f2994a">
-                  $54.99
-                  <h5 style="text-decoration: line-through">$94.99</h5>
-                </h4>
-              </section>
-              <section class="itemsNumber">
-                <button class="minus">-</button>
-                <span class="value">1</span>
-                <button class="plus">+</button>
-              </section>
-            </div>
-          </section>
-          <section class="shoes">
-            <img src="photo2.png" alt="" />
-            <div class="orientation">
-              <section style="margin-left: 10%">
-                <h5>Levi Shoes</h5>
-                <h4 class="orange_txt" style="color: #f2994a">
-                  $74.99
-                  <h5 style="text-decoration: line-through">$124.99</h5>
-                </h4>
-              </section>
-              <section class="itemsNumber">
-                <button class="minus">-</button>
-                <span class="value">1</span>
-                <button class="plus">+</button>
-              </section>
-            </div>
+      <!--bag and shoes!-->
+      <div class="bag_shoes">
+        <!--bag-->
+        <div class="bag">
+          <img src="./photo1.png" alt="" />
+          <section class="under_price">
+            <h4>Vintage Backbag</h4>
+            <p style="color: #f2994a; font-weight: bold">
+              $54.99<span
+                style="text-decoration: line-through; float: right; color: #333"
+                >$94.99</span
+              >
+            </p>
+
+            <section class="order_size">
+              <button class="btn_size">-</button>
+              <p class="item_number">1</p>
+              <button class="btn_size">+</button>
+            </section>
           </section>
         </div>
-        <div class="shipping_total">
-          <div class="line"></div>
-          <div style="margin: 3% 0">
-            Shipping <span style="float: right"><strong>$19</strong> </span>
-          </div>
-          <div class="line"></div>
-          <div style="margin: 3% 0">
-            Total <span style="float: right"><strong>$148</strong> </span>
-          </div>
+
+        <!--shoes-->
+        <div class="shoes" style="margin-top: 5%">
+          <img src="./photo2.png" alt="" />
+          <section class="under_price">
+            <h4>Vintage Backbag</h4>
+            <p style="color: #f2994a; font-weight: bold">
+              $74.99<span
+                style="text-decoration: line-through; float: right; color: #333"
+                >$124.99</span
+              >
+            </p>
+
+            <section class="order_size">
+              <button class="btn_size">-</button>
+              <p class="item_number">1</p>
+              <button class="btn_size">+</button>
+            </section>
+          </section>
+        </div>
+        <!--line-through-->
+        <div class="line_through">
+          <section class="through"></section>
+          <p style="margin: 2% 0">
+            Shipping<span style="float: right">$19</span>
+          </p>
+          <section class="through"></section>
+          <p style="margin: 2% 0">
+            Total<span style="float: right">$148.98</span>
+          </p>
         </div>
       </div>
 
-      <!--Contact info and Shipping address-->
-      <div class="details">
-        <!--Contact info -->
-        <h2 style="margin: 10% 0 5% 0">Contact information</h2>
-        <section class="contact_info">
+      <!--form inputs-->
+      <div class="form_inputs">
+        <!--contact_information-->
+        <div class="contact_information">
+          <h3>Contact infomation</h3>
           <form>
-            <label for="mail">email</label>
-            <section class="label_input">
-              <i class="material-symbols-outlined"> mail </i>
+            <label for="mail">E-mail</label>
+            <section class="wrapper">
+              <i class="material-symbols-outlined">mail</i>
               <input
-                id="mail"
-                type="email"
+                type="mail"
                 name="mail"
+                id="mail"
                 placeholder="Enter your email..."
               />
             </section>
           </form>
-
           <form>
-            <label for="phone">phone</label>
-            <section class="label_input">
-              <i class="material-symbols-outlined"> call </i>
+            <label for="phone">Phone</label>
+            <section class="wrapper">
+              <i class="material-symbols-outlined">phone</i>
               <input
-                id="phone "
                 type="tel"
                 name="phone"
+                id="phone"
                 placeholder="Enter your phone..."
               />
             </section>
           </form>
-        </section>
+        </div>
 
-        <!--Shipping address-->
-
-        <h2 style="margin: 10% 0 5% 0">Shipping and address</h2>
-        <section class="shipping_addres">
+        <!--shipping_address-->
+        <div class="shipping_address">
+          <h3>Shipping address</h3>
           <form>
-            <label for="name">fullname</label>
-            <section class="label_input">
-              <i class="material-symbols-outlined"> contacts </i>
+            <label for="name">Full name</label>
+            <section class="wrapper">
+              <i class="material-symbols-outlined">contacts</i>
               <input
-                id="name"
                 type="text"
                 name="name"
-                placeholder="Your fullname..."
+                id="name"
+                placeholder="Your name..."
               />
             </section>
           </form>
           <form>
-            <label for="address">address</label>
-            <section class="label_input">
-              <i class="material-symbols-outlined"> home </i>
+            <label for="address">Address</label>
+            <address class="wrapper">
+              <i class="material-symbols-outlined">home</i>
               <input
-                id="address"
                 type="text"
                 name="address"
-                placeholder=" Your address..."
+                id="address"
+                placeholder="Your address..."
               />
-            </section>
+            </address>
           </form>
-
           <form>
-            <label for="city">city</label>
-            <section class="label_input">
-              <i class="material-symbols-outlined"> location_city </i>
+            <label for="city">City</label>
+            <section class="wrapper">
+              <i class="material-symbols-outlined">apartment</i>
               <input
-                id="city"
                 type="text"
                 name="city"
+                id="city"
                 placeholder="Your city..."
               />
             </section>
+            <div class="country_postal"></div>
           </form>
 
-          <div class="country_postalcode">
+          <!--contry_postal-->
+          <div style="display: flex; justify-content: space-around">
             <form>
-              <label for="country">country</label>
-              <section class="label_input country" style="width: fit-content">
-                <i class="material-symbols-outlined"> location_city </i>
+              <label for="country">Country</label>
+              <section class="wrapper country_postal" style="float: left">
+                <i class="material-symbols-outlined">location_city</i>
                 <input
-                  id="country"
                   type="text"
                   name="country"
+                  id="country"
                   placeholder="Your country..."
                 />
               </section>
             </form>
-
             <form>
-              <label for="postal">postal code</label>
-              <section class="label_input postal" style="width: fit-content">
-                <i class="material-symbols-outlined"> local_post_office </i>
+              <label for="postal" style="margin-left: 8%"> Postal code</label>
+              <section class="wrapper country_postal" style="float: right">
+                <i class="material-symbols-outlined">local_post_office</i>
                 <input
-                  id="postal"
                   type="number"
+                  id="postal"
                   name="postal"
                   placeholder="Your postal code..."
                 />
               </section>
+              <div class="country_postal"></div>
             </form>
           </div>
-        </section>
+          <!--checkbox-->
+          <div style="margin-top: 0%">
+            <input
+              type="checkbox"
+              id="checkbox"
+              name="checkbox"
+              style="width: fit-content; margin-right: 2%; cursor: pointer"
+            />
+            <label for="checkbox">Save this information for next time</label>
+          </div>
+
+          <!--button-->
+          <button class="btn_continue" type="submit">Continue</button>
+        </div>
       </div>
     </main>
-    <form class="last_form" style="text-transform: normal">
-      <input name="info" id="info" type="checkbox" />
-      <label for="info" style="font-weight: lighter"
-        >Save this information for next time</label
-      >
-    </form>
 
-    <button style="float: right" class="continue">continue</button>
+    <footer>created by pricheus</footer>
   </body>
-
-  <footer style="text-align: center">
-    <div style="color: #bdbdbd">
-      created by
-      <span style="font-weight: bold">pricheus7</span> - devChallenges.io
-    </div>
-  </footer>
 </html>

@@ -1,242 +1,313 @@
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: content-box;
 }
-
 html {
   font-size: 12px;
-  height: 100%;
 }
 
 body {
   font-size: 1rem;
+  font-family: sans-serif;
   padding: 5% 3% 0 3%;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
+/*header*/
+header {
+  margin-bottom: 2%;
+}
 /*main*/
-
-main {
-  margin-top: 10%;
+.bag_shoes {
+  background-color: #f2f2f2;
+  border-radius: 12px;
+  height: auto;
+  padding: 10% 10%;
 }
 
 img {
-  width: 35%;
+  width: 42.75%;
+  height: 44.64%;
   border-radius: 12px;
 }
 
-.checkout_box {
-  background-color: #f2f2f2;
-  padding: 5%;
+.bag,
+.shoes {
+  display: flex;
+  justify-content: space-between;
+  width: 87%;
 }
 
-.orientation {
-  width: 100%;
+.under_price {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.bag,
-.shoes {
+
+.order_size {
   display: flex;
+  border: 1px solid #828282;
+  border-radius: 9px;
+  padding: 2%;
+  justify-content: space-around;
+  padding: 5% 0;
 }
 
-.shoes {
-  margin-top: 8%;
-}
-
-.itemsNumber {
-  border: 1px solid #333;
-  width: 50%;
-  height: 4vh;
-  border-radius: 12px;
-  margin: 0 0 0 9.5%;
-  background-color: inherit;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  font-size: large;
-  font-weight: bold;
-}
-
-.plus,
-.minus {
+.btn_size {
+  height: 18px;
+  width: 18px;
+  border-radius: 6px;
+  border: none;
   background-color: #e0e0e0;
-  color: #333;
-  width: 25%;
-  height: 60%;
   font-size: large;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  border-radius: inherit;
-}
-.orange_txt {
-  padding-top: 4%;
 }
 
-.shipping_total {
+.line_through {
+  padding-top: 25%;
+}
+.through {
+  border-top: 1px solid #bdbdbd;
+}
+
+/*forms*/
+
+.contact_information {
   margin-top: 20%;
 }
-
-.line {
-  border: 0.12px solid #bdbdbd;
-}
-
-/*Contact info and shipping*/
-.details {
-  margin-top: 15%;
-}
-.label_input {
-  display: flex;
-  margin-top: 3%;
-  padding-left: 3%;
-  align-items: center;
-  border: 1.5px solid #bdbdbd;
-  border-radius: 12px;
-  height: 4.5vh;
-}
-form {
+h3 {
   margin-bottom: 3%;
 }
-label {
-  font-weight: bold;
-  text-transform: capitalize;
-  margin: 0;
+.wrapper {
+  border: 1px solid #828282;
+  border-radius: 12px;
+  padding: 2%;
+  margin: 1% 0 5% 0;
+  display: flex;
 }
 
 input {
-  padding: 0 2%;
-  border: none;
-  color: #bdbdbd;
-  font-size: 0.8rem;
-  font-weight: bold;
-  font-family: "Montserrat", sans-serif;
+  outline: none;
   width: 100%;
-  height: 100%;
+  border: none;
+  font-size: large;
+}
+i {
+  width: 12%;
 }
 
-.country_postalcode {
-  display: flex;
-  justify-content: space-between;
+.shipping_address {
+  margin-top: 15%;
 }
 
-.country,
-.postal {
-  width: 50%;
+.country_postal {
+  width: 90%;
+  padding: 2% 2%;
+}
+.country_postal i {
+  width: 20%;
 }
 
-.last_form {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  width: 64.7%;
-}
-
-button {
-  margin: 10% 0;
+.btn_continue {
   background-color: #f2994a;
   color: #fff;
-  width: 38%;
-  height: 6vh;
-  text-transform: capitalize;
   border: none;
+  font-size: 1.3rem;
+  padding: 2%;
   border-radius: 12px;
-  font-size: medium;
-  font-family: "Montserrat", sans-serif;
+  width: 25%;
+  height: 3vh;
   cursor: pointer;
+  float: right;
+  margin-top: 10%;
 }
 
+/*footer*/
 footer {
-  position: relative;
+  position: absolute;
+  left: 0;
+  right: 0;
   text-align: center;
+  padding: 40% 0 5% 0;
 }
+
 /*sm tablets*/
-@media screen and (min-width: 426px) and (orientation: portrait) {
-  .itemsNumber {
-    height: 6vh;
+@media screen and (min-width: 500px) and (orientation: portrait) {
+  body {
+    font-size: 1.2rem;
+  }
+
+  .order_size {
+    width: 25vw;
+  }
+
+  .btn_size {
+    height: 28px;
+    width: 28px;
+  }
+
+  .country_postal {
+    width: 40vw;
+    padding: 5% 5%;
+  }
+  h3 {
+    margin-bottom: 3%;
+  }
+
+  i {
+    width: 8%;
+  }
+
+  input {
+    width: 100%;
   }
 }
 
 /*md tablets*/
 @media screen and (min-width: 768px) and (orientation: portrait) {
-  .itemsNumber {
-    border-radius: 18px;
+  body {
+    font-size: 1.2rem;
+  }
+
+  .order_size {
+    width: 25vw;
+  }
+
+  .btn_size {
+    height: 28px;
+    width: 28px;
+  }
+
+  .item_number {
+    font-size: 2rem;
+  }
+
+  .country_postal {
+    width: 40vw;
+    padding: 5% 5%;
+  }
+
+  .btn_continue {
+    font-size: 2rem;
+  }
+
+  i {
+    width: 6%;
+  }
+
+  .country_postal i {
+    width: 14%;
+  }
+
+  .btn_continue {
+    width: auto;
+    padding: 2%;
   }
 }
 
-/*lg tablets*/
+/*md tablets*/
 @media screen and (min-width: 1024px) and (orientation: portrait) {
-  body {
-    font-size: 1.8rem;
+  i {
+    width: 4.5%;
   }
 
-  .continue {
-    font-size: larger;
-    letter-spacing: 3px;
+  .country_postal i {
+    width: 10%;
   }
 }
 
 /*sm computer*/
-@media screen and (min-width: 769px) and (orientation: landscape) {
+@media screen and (min-width: 768px) and (orientation: landscape) {
   body {
-    font-size: 1.5rem;
+    padding: 5% 5%;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.2rem;
   }
-
   main {
     display: flex;
     flex-direction: row-reverse;
+    justify-content: space-between;
     width: 100%;
-    justify-content: space-between;
   }
 
-  .itemsNumber {
-    height: 4vh;
-    border-radius: 18px;
+  .bag_shoes {
+    height: fit-content;
+    padding: 5% 5%;
+    width: 30%;
   }
-
-  .checkout_box {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-  }
-
-  .details {
+  .form_inputs {
     width: 50%;
-    height: 100%;
+  }
+  .contact_information {
+    margin-top: 0%;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  h3 {
+    font-size: 2rem;
   }
 
-  .continue {
+  footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 10% 0 2% 0;
+  }
+
+  input {
+    font-size: large;
+  }
+
+  i {
+    width: 8%;
+  }
+
+  .country_postal i {
     width: 20%;
-    height: 8vh;
-    font-size: larger;
-    letter-spacing: 2px;
   }
 }
 
 /*md computer*/
 @media screen and (min-width: 1024px) and (orientation: landscape) {
   body {
-    font-size: 1.5rem;
+    padding: 5% 10%;
+    font-family: "Poppins", sans-serif;
   }
 }
 
 /*lg computer*/
 @media screen and (min-width: 1440px) and (orientation: landscape) {
   body {
-    font-size: 1.5rem;
+    padding: 5% 10%;
+    font-family: "Poppins", sans-serif;
   }
 }
 
-/*lg computer*/
+/*xlg computer*/
 @media screen and (min-width: 1920px) and (orientation: landscape) {
   body {
+    padding: 5% 25%;
+    font-family: "Poppins", sans-serif;
     font-size: 2rem;
-    padding: 3% 10% 0 10%;
+  }
+  .btn_size {
+    height: 28px;
+    width: 28px;
+    border-radius: 6px;
   }
 
-  .itemsNumber {
-    height: 5vh;
-    border-radius: 20px;
+  .btn_continue {
+    font-size: inherit;
+  }
+  .bag_shoes {
+    padding: 5%;
+    justify-content: space-between;
+    width: 35%;
   }
 }
